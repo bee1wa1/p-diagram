@@ -1,4 +1,4 @@
-# p_diagram_merged_app.py
+# p-diagram.py
 # Streamlit app:
 # 1) Build a P-Diagram for FMEA / robust design / DRBFM
 # 2) Simulate input-output relationships:
@@ -316,9 +316,11 @@ MATERIAL_PRESETS = {
 # =============================================================================
 
 APP_DIR = Path(__file__).parent
+ASSETS_DIR = APP_DIR / "assets"
+GEAR_IMAGE_PATH = ASSETS_DIR / "gear_wheels_contact_sketch.png"
 
 def render_gear_picture_from_file() -> None:
-    image_path = APP_DIR / "gear_wheels_contact_sketch.png"
+    image_path = GEAR_IMAGE_PATH
 
     if image_path.exists():
         st.image(
@@ -328,7 +330,7 @@ def render_gear_picture_from_file() -> None:
     else:
         st.warning(
             f"Image not found: {image_path.name}. "
-            "Place the image in the same folder as the Streamlit app."
+            "Place gear_wheels_contact_sketch.png inside the assets folder."
         )
 
 
@@ -1894,7 +1896,7 @@ For the plastic gear example:
 
     st.code(
         "pip install streamlit pandas numpy plotly graphviz\n"
-        "streamlit run p_diagram_merged_app.py",
+        "streamlit run p-diagram.py",
         language="bash",
     )
 
