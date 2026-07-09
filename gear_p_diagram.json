@@ -1,0 +1,69 @@
+{
+  "title": "Gear Transmission (Spur/Helical)",
+  "orientation": "Left-to-Right",
+  "include_legend": true,
+  "intended_input": [
+    "Input torque (Nm)",
+    "Input rotational speed (rpm)",
+    "Duty cycle / load spectrum",
+    "Axial and radial reaction loads",
+    "Lubrication oil supply (flow/level)",
+    "Ambient conditions (temperature, dust)"
+  ],
+  "ideal_function": [
+    "Transmit torque and speed according to gear ratio",
+    "Maintain smooth meshing and correct kinematics",
+    "Limit contact and bending stresses within design allowables",
+    "Maintain adequate lubrication film to minimize wear",
+    "Keep temperature rise within specified limits"
+  ],
+  "desired_outputs": [
+    "Specified output torque and speed (gear ratio achieved)",
+    "Low noise and vibration (within dB / mm/s targets)",
+    "High efficiency (≥ target %)",
+    "Stable operating temperature (≤ target °C rise)",
+    "Minimal wear over service life"
+  ],
+  "control_factors": [
+    { "Factor": "Gear material & hardness", "Setting/Range": "e.g., 16MnCr5, 58–62 HRC case", "Notes": "Carburized & ground" },
+    { "Factor": "Tooth geometry (module, PA, helix)", "Setting/Range": "m, 20°/25°, β=0–25°", "Notes": "Profile/lead mods as needed" },
+    { "Factor": "Profile shift / crowning", "Setting/Range": "x, Cα/Cβ per load", "Notes": "Edge load mitigation" },
+    { "Factor": "Face width", "Setting/Range": "e.g., 10–40 mm", "Notes": "Per torque & life" },
+    { "Factor": "Surface finish / grinding", "Setting/Range": "Ra ≤ target", "Notes": "Ground flanks" },
+    { "Factor": "Heat treatment", "Setting/Range": "Carburize/nitride/spec", "Notes": "Core toughness" },
+    { "Factor": "Backlash & tolerances", "Setting/Range": "Per ISO 1328 class", "Notes": "Noise/thermal growth" },
+    { "Factor": "Shaft alignment & housing stiffness", "Setting/Range": "≤ target μm/mrad", "Notes": "Mounting specs" },
+    { "Factor": "Bearing selection & preload", "Setting/Range": "Type / preload value", "Notes": "Controls mesh alignment" },
+    { "Factor": "Lubricant type & viscosity", "Setting/Range": "ISO VG per temp", "Notes": "Additives per duty" },
+    { "Factor": "Lube supply method", "Setting/Range": "Splash/jet/bath level", "Notes": "Flow rate / nozzle aim" },
+    { "Factor": "Sealing solution", "Setting/Range": "Lip/mech seal spec", "Notes": "In/ingress & leakage" }
+  ],
+  "noise_factors": [
+    { "Category": "Environment", "Factor": "Ambient temperature variation", "Notes": "Cold start / hot climate" },
+    { "Category": "Environment", "Factor": "Dust/particulates & moisture", "Notes": "Ingress risk" },
+    { "Category": "Environment", "Factor": "Corrosive agents", "Notes": "Chemicals/salt fog" },
+    { "Category": "Usage", "Factor": "Shock loads / overload events", "Notes": "Start-up / impacts" },
+    { "Category": "Usage", "Factor": "Duty cycle variability", "Notes": "Stop/start, reversals" },
+    { "Category": "Usage", "Factor": "Operator behavior", "Notes": "Improper warm-up" },
+    { "Category": "Manufacturing", "Factor": "Tooth profile/lead deviations", "Notes": "Fα/Fβ scatter" },
+    { "Category": "Manufacturing", "Factor": "Pitch error & runout", "Notes": "Fp, Fr" },
+    { "Category": "Manufacturing", "Factor": "Material & case depth scatter", "Notes": "Hardness variation" },
+    { "Category": "Aging/Degradation", "Factor": "Lubricant oxidation/contamination", "Notes": "Water, wear debris" },
+    { "Category": "Aging/Degradation", "Factor": "Seal wear & leakage", "Notes": "Oil loss over time" },
+    { "Category": "Aging/Degradation", "Factor": "Bearing degradation", "Notes": "Affects alignment" },
+    { "Category": "Other", "Factor": "Housing deformation/thermal growth", "Notes": "Load/temperature" },
+    { "Category": "Other", "Factor": "Installation misalignment", "Notes": "Assembly variation" }
+  ],
+  "error_states": [
+    "Tooth pitting / micropitting",
+    "Scuffing / scoring",
+    "Spalling / flake failure",
+    "Tooth root bending fatigue / breakage",
+    "Excessive noise / NVH",
+    "Overheating of gearbox",
+    "Accelerated wear due to poor lubrication",
+    "Efficiency loss",
+    "Oil leakage / foaming",
+    "Corrosion of flanks"
+  ]
+}
